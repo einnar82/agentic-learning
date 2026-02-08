@@ -2,6 +2,7 @@
 
 > Purpose: reusable session template for day-to-day learning and implementation.
 > Usage: copy this file to `docs/sessions/YYYY-MM-DD.md` at session start, then fill only required fields by default.
+> Workflow reference: follow `docs/WORKFLOW.md` for the complete operating sequence.
 > This template changes infrequently; per-session logs live in `docs/sessions/`.
 > Last update (2026-02-08): split session history into `docs/sessions/` and keep this file template-only.
 

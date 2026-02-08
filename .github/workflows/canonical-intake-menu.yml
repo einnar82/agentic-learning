@@ -1,0 +1,17 @@
+name: Canonical Intake Menu Guard
+
+on:
+  pull_request:
+  push:
+    branches:
+      - main
+
+jobs:
+  verify-canonical-intake-menu:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Validate canonical intake menu
+        run: ./scripts/check_canonical_intake_menu.sh

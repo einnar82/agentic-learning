@@ -16,9 +16,10 @@ Read and enforce:
 - `docs/PROJECT_BRIEF.md` (required when starting a new runnable project in `apps/`; optional for docs/process-only sessions)
 - `docs/adr/README.md`
 
-Use the exact option set in `docs/LEARNING_PROFESSOR_PLAYBOOK.md` (Section 1, Session Intake).
+Use the exact option set in `docs/LEARNING_PROFESSOR_PLAYBOOK.md` (Section 1, Session Intake, Canonical Intake Menu) and do not omit any options.
 Render the full options menu inside a fenced code block so numbering does not drift.
 Reply format: `LG-TC-DL-SM-TB` (example: `1-2-3-4-2`).
+After intake selection, follow `docs/WORKFLOW.md` for end-to-end execution.
 
 After I answer:
 - Propose a max-3-task session plan.

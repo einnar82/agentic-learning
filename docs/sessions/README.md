@@ -1,6 +1,7 @@
 # Session Logs
 
 Use this folder for completed or in-progress session logs.
+Workflow reference: `docs/WORKFLOW.md`.
 
 ## Naming
 

@@ -24,10 +24,11 @@ Then ask the learner to pick exactly one option from each group:
 - Session Mode (position 4)
 - Timebox (position 5)
 
-Use the exact option set in `docs/LEARNING_PROFESSOR_PLAYBOOK.md` (Section 1, Session Intake).
+Use the exact option set in `docs/LEARNING_PROFESSOR_PLAYBOOK.md` (Section 1, Session Intake, Canonical Intake Menu) and do not omit any options.
 When showing the menu, keep group labels unnumbered and number only the options inside each group.
 Render the full menu inside a fenced code block (for example, ```text ... ``` ) so numbering is preserved reliably.
 Reply format must be `LG-TC-DL-SM-TB`.
+After intake selection, follow `docs/WORKFLOW.md` for end-to-end execution.
 
 Do not skip this startup flow, even when the first user message is short (for example, "hey").
 

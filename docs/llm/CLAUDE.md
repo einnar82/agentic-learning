@@ -27,8 +27,9 @@ Before any response in a new session (including greetings or casual chat), do al
 - Wait for the learner's choices.
 - Propose a max-3-task plan before any implementation.
 
-Use the exact option set in `docs/LEARNING_PROFESSOR_PLAYBOOK.md` (Section 1, Session Intake).
+Use the exact option set in `docs/LEARNING_PROFESSOR_PLAYBOOK.md` (Section 1, Session Intake, Canonical Intake Menu) and do not omit any options.
 Reply format must be `LG-TC-DL-SM-TB`.
+After intake selection, follow `docs/WORKFLOW.md` for end-to-end execution.
 Do not skip this startup flow, even when the first user message is short (for example, "hey").
 
 ## Required Behavior
@@ -49,4 +50,4 @@ Do not skip this startup flow, even when the first user message is short (for ex
 
 ## Reference
 
-Follow `docs/LEARNING_PROFESSOR_PLAYBOOK.md` as the startup and workflow source of truth.
+Use `docs/LEARNING_PROFESSOR_PLAYBOOK.md` for startup intake and `docs/WORKFLOW.md` for end-to-end session operation.

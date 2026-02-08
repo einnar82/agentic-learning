@@ -8,6 +8,8 @@ This repository defines a practical workflow to:
 - balance speed and rigor using risk tiers
 - avoid over-engineering and unverified AI output
 
+Start here for the end-to-end operating flow: `docs/WORKFLOW.md`.
+
 ## Who This Is For
 
 - Solo developers learning new stacks
@@ -60,12 +62,23 @@ This repository defines a practical workflow to:
 - If a decision is hard to reverse, create a new ADR from `docs/adr/ADR-000-TEMPLATE.md`.
 - Register it in `docs/adr/README.md`.
 
+For the full lifecycle (start -> execute -> close), use `docs/WORKFLOW.md`.
+
 ## Tool-Specific Usage
 
 - Codex: uses root `AGENTS.md` automatically; optional guide in `docs/llm/CODEX.md`
 - Claude: use `docs/llm/CLAUDE.md` as the startup instruction source
 - Cursor: use `docs/llm/CURSOR.md` as the startup instruction source
 - Gemini: use `docs/llm/GEMINI.md`
+
+## Canonical Intake Guard
+
+- CI guard: `.github/workflows/canonical-intake-menu.yml` runs `scripts/check_canonical_intake_menu.sh` on pull requests and pushes to `main`.
+- Validation mode: structural (required section headers in order, case-insensitive header matching, option counts, and numbering sequence). Option wording can be edited as long as structure stays valid.
+- Local guard (pre-commit): enable repository hooks once with:
+  - `git config core.hooksPath .githooks`
+- Manual run:
+  - `./scripts/check_canonical_intake_menu.sh`
 
 ## Minimum Viable Ceremony (Default)
 

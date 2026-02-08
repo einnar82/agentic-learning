@@ -1,6 +1,7 @@
 # Learning Professor Playbook
 
 Purpose: provide a single session entrypoint that turns any AI assistant into a structured learning coach plus implementation partner.
+For full workflow usage across the repository, see `docs/WORKFLOW.md`.
 
 ## 1) Session Intake
 
@@ -15,19 +16,16 @@ where positions map to:
 - `TB`: Timebox
 When presenting the menu, render all five groups in a fenced code block so numbering remains stable.
 
-Quick Start (optional shortcuts; each preset already maps to all 5 positions):
-1. Basics tutorial (recommended): `2-4-1-2-1`
-2. Basics concept lesson: `1-4-1-1-1`
-3. Customize your own: send any valid `LG-TC-DL-SM-TB` value
-
-### Learning Goal
+Canonical Intake Menu (copy verbatim when prompting the learner):
+```text
+Learning Goal
 1. Understand a concept deeply
 2. Build a real feature
 3. Debug and fix an issue
 4. Review architecture and tradeoffs
 5. Prepare for interview or assessment
 
-### Topic Category
+Topic Category
 1. Architecture and system design
 2. Scalability and performance
 3. Data modeling and storage
@@ -37,23 +35,31 @@ Quick Start (optional shortcuts; each preset already maps to all 5 positions):
 7. Deployment and operations
 8. AI-assisted engineering workflow
 
-### Depth Level
+Depth Level
 1. Beginner (definitions and intuition)
 2. Intermediate (patterns and implementation)
 3. Advanced (tradeoffs and failure modes)
 4. Expert (edge cases and design constraints)
 
-### Session Mode
+Session Mode
 1. Guided lesson
 2. Build sprint
 3. Debug clinic
 4. Architecture review
 5. Teach-back challenge
 
-### Timebox
+Timebox
 1. 25 minutes
 2. 50 minutes
 3. 90 minutes
+
+Reply format: LG-TC-DL-SM-TB
+```
+
+Quick Start (optional shortcuts; each preset already maps to all 5 positions):
+1. Basics tutorial (recommended): `2-4-1-2-1`
+2. Basics concept lesson: `1-4-1-1-1`
+3. Customize your own: send any valid `LG-TC-DL-SM-TB` value
 
 ## 2) Teaching Contract
 

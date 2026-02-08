@@ -2,6 +2,7 @@
 
 These guardrails define how we learn new tech by creating a new project **without losing control, quality, or deadlines**.  
 They apply to any stack (Node/TS, Go, PHP, etc.) and assume AI tools may be used.
+For the step-by-step operating sequence, see `docs/WORKFLOW.md`.
 
 ---
 
