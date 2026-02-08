@@ -1,41 +1,38 @@
 # WORKING_SESSION.md (Template)
 
-> Purpose: a living log for day-to-day learning, experiments, and evolving decisions.
-> This file changes often. The guardrails and ADRs change less often.
-> Minimum Viable Ceremony default: complete only sections marked "Required".
-> Last update (2026-02-08): added quick-start presets (including Basics), an explicit Customize path, and a root `apps/` project-placement guardrail.
+> Purpose: reusable session template for day-to-day learning and implementation.
+> Usage: copy this file to `docs/sessions/YYYY-MM-DD.md` at session start, then fill only required fields by default.
+> This template changes infrequently; per-session logs live in `docs/sessions/`.
+> Last update (2026-02-08): split session history into `docs/sessions/` and keep this file template-only.
 
 ## Session Mode
 - Default: Minimum Viable Ceremony (MVC)
-- Risk Tier: Tier 0
+- Risk Tier: Tier 0 | Tier 1 | Tier 2
 
 ## Required Checklist
-- [x] Date
-- [x] Session Goal
-- [x] Plan (max 3 tasks)
-- [x] Build Log (at least one Explain -> Change -> Prove entry)
-- [x] What I Can Now Explain
-- [x] Next Session Plan
+- [ ] Date
+- [ ] Session Goal
+- [ ] Plan (max 3 tasks)
+- [ ] Build Log (at least one Explain -> Change -> Prove entry)
+- [ ] What I Can Now Explain
+- [ ] Next Session Plan
 
 ## Date (Required)
-- 2026-02-08
+- YYYY-MM-DD
 
 ## Session Goal (Required)
-- Make startup selection fast for beginner tutorials with quick presets and a clear Customize path.
-- Add an explicit guardrail that requires the runnable project to live under the root `apps/` directory.
+- 
+
+## Project Brief Check
+- [ ] New runnable project kickoff in `apps/`: fill or update `docs/PROJECT_BRIEF.md`
+- [ ] Docs/process-only session: `docs/PROJECT_BRIEF.md` not required (mark N/A)
 
 ## Plan (Plan-First, Required)
-- Vertical slice for today: make prompt menus consistent and easy to answer in one pass, then enforce repository layout consistency.
+- Vertical slice for today:
 - Tasks (small, reversible steps):
-  - [x] Replace numbered group headers with named group labels + positions.
-  - [x] Keep numbering only for options inside each group and add reply mapping format.
-  - [x] Verify wording across startup docs and update this session log.
-- Follow-up tasks (small, reversible steps):
-  - [x] Add quick-start preset options for beginner use cases.
-  - [x] Include an explicit Customize option that keeps full `LG-TC-DL-SM-TB` flexibility.
-  - [x] Verify quick-start wording is consistent across playbook and model startup files.
-  - [x] Add a guardrail in `docs/GUARDRAILS.md` that requires runnable project code under root `apps/`.
-  - [x] Keep the new layout rule concrete with an `apps/my-project` example.
+  - [ ]
+  - [ ]
+  - [ ]
 
 ## Context Pack (Optional, Tier 1/2 Recommended)
 - Official docs/specs:
@@ -52,7 +49,7 @@
 - Options:
   - A:
   - B:
-- How we’ll decide (evidence needed):
+- How we'll decide (evidence needed):
 - Links:
   - 
 
@@ -65,44 +62,9 @@
 
 ## Build Log (Explain -> Change -> Prove, Required)
 ### Change 1
-- Explain: The menu was ambiguous because both group labels and choices used numeric prefixes (for example, `1. Learning Goal` above `1. Understand...`).
-- Change: Updated startup docs to use explicit group labels/positions and preserved numbering only for option choices in `AGENTS.md`, `docs/llm/SESSION_START.md`, `docs/llm/CODEX.md`, `docs/llm/CLAUDE.md`, and `docs/llm/CURSOR.md`.
-- Prove: `rg -n "^1\\. Learning Goal$|^2\\. Topic Category$|^3\\. Depth Level$|^4\\. Session Mode$|^5\\. Timebox$" -S AGENTS.md docs/llm` returned no matches.
-
-### Change 2
-- Explain: The answer format needed an explicit mapping so learners know what each number in `1-2-3-4-2` means.
-- Change: Added `Reply format: LG-TC-DL-SM-TB (example: 1-2-3-4-2)` and group position labels in startup docs.
-- Prove: `rg -n "Reply format: .*LG-TC-DL-SM-TB.*|position 1|Group 1, choose one" -S AGENTS.md docs/llm` shows the new strings in all startup prompt files.
-
-### Change 3
-- Explain: The core playbook should mirror startup templates so instructions stay consistent regardless of entrypoint file.
-- Change: Added the same `LG-TC-DL-SM-TB` reply format and position mapping to `docs/LEARNING_PROFESSOR_PLAYBOOK.md`.
-- Prove: `rg -n "Reply format: `LG-TC-DL-SM-TB`|where positions map to:" -S docs/LEARNING_PROFESSOR_PLAYBOOK.md` returns matching lines.
-
-### Change 4
-- Explain: The top-level README needed to reflect current files and the new intake response format.
-- Change: Updated `README.md` repository structure and tool usage entries, and added `LG-TC-DL-SM-TB` quick-start guidance.
-- Prove: `rg -n "SESSION_START\\.md|LG-TC-DL-SM-TB|CLAUDE\\.md: root|\\.cursorrules" -S README.md` shows the new guidance and no outdated root-reference lines.
-
-### Change 5
-- Explain: A concrete example improves quick-start usability and reduces mistakes when replying with compact intake codes.
-- Change: Added a short `Session intake example` line in `README.md` (`2-4-2-3-1`) with decoded meanings.
-- Prove: `rg -n "Session intake example|2-4-2-3-1" -S README.md` returns both new lines.
-
-### Change 6
-- Explain: Learners asked for a faster beginner path ("basics") plus a way to customize without losing the full option model.
-- Change: Added `Quick Start` presets (`2-4-1-2-1`, `1-4-1-1-1`) and `Customize your own` to `docs/LEARNING_PROFESSOR_PLAYBOOK.md`, `docs/llm/SESSION_START.md`, `docs/llm/CODEX.md`, `docs/llm/CLAUDE.md`, `docs/llm/CURSOR.md`, and documented the shortcuts in `README.md`.
-- Prove: `rg -n "Quick Start \\(optional shortcuts|Basics tutorial|Basics concept lesson|Customize your own" -S docs/LEARNING_PROFESSOR_PLAYBOOK.md docs/llm README.md` returns matches in all intended files.
-
-### Change 7
-- Explain: A rendered startup reply dropped numbered options, so the intake prompt needs a presentation guard to prevent markdown list drift.
-- Change: Added an explicit instruction to render the full startup options menu in a fenced code block in `AGENTS.md`, `docs/LEARNING_PROFESSOR_PLAYBOOK.md`, `docs/llm/SESSION_START.md`, `docs/llm/CODEX.md`, `docs/llm/CLAUDE.md`, and `docs/llm/CURSOR.md`.
-- Prove: `rg -n "fenced code block|numbering does not drift|numbering remains stable|numbering is preserved reliably" -S AGENTS.md docs/LEARNING_PROFESSOR_PLAYBOOK.md docs/llm` returns matches in all updated files.
-
-### Change 8
-- Explain: Project files can scatter across the repository unless layout expectations are explicit.
-- Change: Added `0.6 Repository Layout Guard` in `docs/GUARDRAILS.md` requiring the runnable project to be created under root `apps/` and not at repository root.
-- Prove: `rg -n -F "0.6 Repository Layout Guard" docs/GUARDRAILS.md && rg -n -F "apps/my-project" docs/GUARDRAILS.md && rg -n -F "Do not place primary app code at the repository root." docs/GUARDRAILS.md` returns all new guardrail lines.
+- Explain:
+- Change:
+- Prove:
 
 ## Bugs / Debugging (Optional)
 - Error:
@@ -112,16 +74,9 @@
 - Regression guard (test/check):
 
 ## What I Can Now Explain (Teach-back, Required)
-- Why duplicate numbering (group and option both numeric) creates selection ambiguity.
-- How to design menu prompts with position mapping while keeping option numbering readable.
-- How to verify prompt consistency quickly with `rg`.
-- How quick presets can speed intake while preserving full customization through `LG-TC-DL-SM-TB`.
-- How rendering instructions (code block vs markdown list) affect option integrity in startup menus.
-- How explicit repository layout guardrails prevent project sprawl and reduce ambiguity.
-- How to enforce a simple placement contract (`apps/<project-name>`) with minimal process overhead.
+- 
+- 
 
 ## Next Session Plan (Required)
-- Run one fresh-session dry run using both paths: pick a quick preset and then try a fully customized response.
-- Confirm the menu always displays all options when rendered as a fenced block.
-- Add a short scaffold note in startup docs that points to `apps/<project-name>` when creating a new project.
-- Validate the same path convention appears in README onboarding text.
+- 
+- 

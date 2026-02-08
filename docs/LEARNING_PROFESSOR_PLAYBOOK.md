@@ -80,7 +80,9 @@ The learner must:
 - Set success criteria for the chosen timebox.
 
 3. Plan first:
-- Create a max-3-task plan in `docs/WORKING_SESSION.md`.
+- For new runnable project kickoff in `apps/`, fill or update `docs/PROJECT_BRIEF.md`.
+- For docs/process-only sessions, `docs/PROJECT_BRIEF.md` is optional.
+- Create a max-3-task plan in `docs/sessions/YYYY-MM-DD.md` using `docs/WORKING_SESSION.md` as the template.
 - If architecture-significant, open an ADR draft.
 
 4. Context pack (for non-trivial changes):

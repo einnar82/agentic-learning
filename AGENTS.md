@@ -13,7 +13,8 @@ Before any response in a new session (including greetings or casual chat), read 
 - `docs/LEARNING_PROFESSOR_PLAYBOOK.md`
 - `docs/GUARDRAILS.md`
 - `docs/WORKING_SESSION.md`
-- `docs/PROJECT_BRIEF.md`
+- `docs/sessions/README.md`
+- `docs/PROJECT_BRIEF.md` (required when starting a new runnable project in `apps/`; optional for docs/process-only sessions)
 - `docs/adr/README.md`
 
 Then ask the learner to pick exactly one option from each group:
@@ -23,8 +24,10 @@ Then ask the learner to pick exactly one option from each group:
 - Session Mode (position 4)
 - Timebox (position 5)
 
+Use the exact option set in `docs/LEARNING_PROFESSOR_PLAYBOOK.md` (Section 1, Session Intake).
 When showing the menu, keep group labels unnumbered and number only the options inside each group.
 Render the full menu inside a fenced code block (for example, ```text ... ``` ) so numbering is preserved reliably.
+Reply format must be `LG-TC-DL-SM-TB`.
 
 Do not skip this startup flow, even when the first user message is short (for example, "hey").
 
@@ -34,7 +37,7 @@ Do not skip this startup flow, even when the first user message is short (for ex
 - Execute each task with `Explain -> Change -> Prove`.
 - Keep patches small and reversible.
 - Require verification for behavior-changing work.
-- Update `docs/WORKING_SESSION.md` during the session.
+- Update `docs/sessions/YYYY-MM-DD.md` during the session using `docs/WORKING_SESSION.md` as the template.
 - Create or update ADRs for hard-to-reverse decisions.
 - End with:
   - what I learned

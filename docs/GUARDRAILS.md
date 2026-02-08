@@ -12,8 +12,9 @@ Use this as the default baseline. Escalate to stricter process only when risk is
 ### 0.1 Required Artifacts
 
 Create and maintain:
-- `docs/PROJECT_BRIEF.md` (once per project)
-- `docs/WORKING_SESSION.md` (updated each session)
+- `docs/WORKING_SESSION.md` (template, maintained when process changes)
+- `docs/sessions/YYYY-MM-DD.md` (updated each session)
+- `docs/PROJECT_BRIEF.md` (required for new runnable project kickoff in `apps/`; optional for docs/process-only sessions)
 - ADR files only when ADR trigger conditions are met
 
 ### 0.2 Required Session Fields (10-minute overhead target)
@@ -26,7 +27,7 @@ For each session, complete only:
 - What I Can Now Explain
 - Next Session Plan
 
-Everything else in `WORKING_SESSION.md` is optional unless risk tier requires it.
+Everything else in the daily session file (`docs/sessions/YYYY-MM-DD.md`) is optional unless risk tier requires it.
 
 ### 0.3 ADR Trigger (Write ADR only if hard to reverse)
 
@@ -82,8 +83,10 @@ ADR is required for decisions involving:
 
 ## B. Project Scoping Guardrails
 
-5) **One‑Page Project Brief Required**  
+5) **One‑Page Project Brief for New Projects**  
+   Required when starting a new runnable project in `apps/`.
    Include: goal, non‑goals, success criteria, target users, constraints (time/resources).
+   Optional for docs/process-only sessions.
 
 6) **Vertical Slice First**  
    Build 1 end‑to‑end flow before adding breadth.

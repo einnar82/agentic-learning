@@ -26,7 +26,8 @@ This repository defines a practical workflow to:
 
 - `docs/GUARDRAILS.md`: full policy and minimum viable ceremony
 - `docs/PROJECT_BRIEF.md`: one-page kickoff scope and constraints
-- `docs/WORKING_SESSION.md`: session log template (required vs optional fields)
+- `docs/WORKING_SESSION.md`: reusable session template (required vs optional fields)
+- `docs/sessions/`: dated session logs (`YYYY-MM-DD.md`)
 - `docs/LEARNING_PROFESSOR_PLAYBOOK.md`: session intake, tracks, workflow, rubric
 - `docs/adr/`: ADR templates, accepted decisions, and index
 - `docs/llm/`: model-specific entrypoint instructions and startup prompt
@@ -36,8 +37,9 @@ This repository defines a practical workflow to:
 
 ## Quick Start
 
-1. Create your project brief:
-- Fill `docs/PROJECT_BRIEF.md`.
+1. Create your project brief (new runnable projects only):
+- If starting a new project under `apps/`, fill `docs/PROJECT_BRIEF.md`.
+- For docs/process-only sessions, this step is optional.
 
 2. Start a learning session:
 - Use `docs/llm/SESSION_START.md` as your startup prompt in a new AI chat.
@@ -50,7 +52,8 @@ This repository defines a practical workflow to:
   - `2-4-2-3-1` = Build a real feature, APIs and integrations, Intermediate, Debug clinic, 25 minutes.
 
 3. Run the session with minimum ceremony:
-- Update required fields in `docs/WORKING_SESSION.md`.
+- Copy `docs/WORKING_SESSION.md` to `docs/sessions/YYYY-MM-DD.md`.
+- Update required fields in `docs/sessions/YYYY-MM-DD.md`.
 - Execute each task using `Explain -> Change -> Prove`.
 
 4. Capture architecture decisions:
@@ -67,8 +70,9 @@ This repository defines a practical workflow to:
 ## Minimum Viable Ceremony (Default)
 
 Required artifacts:
-- `docs/PROJECT_BRIEF.md`
-- `docs/WORKING_SESSION.md`
+- `docs/WORKING_SESSION.md` (template)
+- `docs/sessions/YYYY-MM-DD.md` (per-session log)
+- `docs/PROJECT_BRIEF.md` (required for new runnable project kickoff in `apps/`; optional for docs/process-only sessions)
 - ADRs only when triggered by hard-to-reverse decisions
 
 Required per-session fields:
