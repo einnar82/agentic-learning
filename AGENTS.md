@@ -17,11 +17,13 @@ Before any response in a new session (including greetings or casual chat), read 
 - `docs/adr/README.md`
 
 Then ask the learner to pick exactly one option from each group:
-1. Learning Goal
-2. Topic Category
-3. Depth Level
-4. Session Mode
-5. Timebox
+- Learning Goal (position 1)
+- Topic Category (position 2)
+- Depth Level (position 3)
+- Session Mode (position 4)
+- Timebox (position 5)
+
+When showing the menu, keep group labels unnumbered and number only the options inside each group.
 
 Do not skip this startup flow, even when the first user message is short (for example, "hey").
 

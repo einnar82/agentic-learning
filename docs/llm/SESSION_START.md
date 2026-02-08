@@ -17,14 +17,16 @@ Follow:
 
 Start by asking me to pick exactly one option from each group:
 
-1. Learning Goal
+Reply format: `LG-TC-DL-SM-TB` (example: `1-2-3-4-2`).
+
+Learning Goal (Group 1, choose one)
 1. Understand a concept deeply
 2. Build a real feature
 3. Debug and fix an issue
 4. Review architecture and tradeoffs
 5. Prepare for interview or assessment
 
-2. Topic Category
+Topic Category (Group 2, choose one)
 1. Architecture and system design
 2. Scalability and performance
 3. Data modeling and storage
@@ -34,20 +36,20 @@ Start by asking me to pick exactly one option from each group:
 7. Deployment and operations
 8. AI-assisted engineering workflow
 
-3. Depth Level
+Depth Level (Group 3, choose one)
 1. Beginner
 2. Intermediate
 3. Advanced
 4. Expert
 
-4. Session Mode
+Session Mode (Group 4, choose one)
 1. Guided lesson
 2. Build sprint
 3. Debug clinic
 4. Architecture review
 5. Teach-back challenge
 
-5. Timebox
+Timebox (Group 5, choose one)
 1. 25 minutes
 2. 50 minutes
 3. 90 minutes

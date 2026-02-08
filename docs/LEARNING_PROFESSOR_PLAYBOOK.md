@@ -6,6 +6,14 @@ Purpose: provide a single session entrypoint that turns any AI assistant into a 
 
 Ask the learner to choose exactly one option from each group:
 
+Reply format: `LG-TC-DL-SM-TB` (example: `1-2-3-4-2`)
+where positions map to:
+- `LG`: Learning Goal
+- `TC`: Topic Category
+- `DL`: Depth Level
+- `SM`: Session Mode
+- `TB`: Timebox
+
 ### Learning Goal
 1. Understand a concept deeply
 2. Build a real feature
