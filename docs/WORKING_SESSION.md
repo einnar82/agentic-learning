@@ -3,7 +3,7 @@
 > Purpose: a living log for day-to-day learning, experiments, and evolving decisions.
 > This file changes often. The guardrails and ADRs change less often.
 > Minimum Viable Ceremony default: complete only sections marked "Required".
-> Last update (2026-02-08): clarified startup menu format to separate group labels from option numbering.
+> Last update (2026-02-08): added quick-start presets (including Basics) with an explicit Customize path.
 
 ## Session Mode
 - Default: Minimum Viable Ceremony (MVC)
@@ -21,7 +21,7 @@
 - 2026-02-08
 
 ## Session Goal (Required)
-- Fix startup selection menus so category headers and option numbers are unambiguous.
+- Make startup selection fast for beginner tutorials with quick presets and a clear Customize path.
 
 ## Plan (Plan-First, Required)
 - Vertical slice for today: make prompt menus consistent and easy to answer in one pass.
@@ -29,6 +29,10 @@
   - [x] Replace numbered group headers with named group labels + positions.
   - [x] Keep numbering only for options inside each group and add reply mapping format.
   - [x] Verify wording across startup docs and update this session log.
+- Follow-up tasks (small, reversible steps):
+  - [x] Add quick-start preset options for beginner use cases.
+  - [x] Include an explicit Customize option that keeps full `LG-TC-DL-SM-TB` flexibility.
+  - [x] Verify quick-start wording is consistent across playbook and model startup files.
 
 ## Context Pack (Optional, Tier 1/2 Recommended)
 - Official docs/specs:
@@ -82,6 +86,11 @@
 - Change: Added a short `Session intake example` line in `README.md` (`2-4-2-3-1`) with decoded meanings.
 - Prove: `rg -n "Session intake example|2-4-2-3-1" -S README.md` returns both new lines.
 
+### Change 6
+- Explain: Learners asked for a faster beginner path ("basics") plus a way to customize without losing the full option model.
+- Change: Added `Quick Start` presets (`2-4-1-2-1`, `1-4-1-1-1`) and `Customize your own` to `docs/LEARNING_PROFESSOR_PLAYBOOK.md`, `docs/llm/SESSION_START.md`, `docs/llm/CODEX.md`, `docs/llm/CLAUDE.md`, `docs/llm/CURSOR.md`, and documented the shortcuts in `README.md`.
+- Prove: `rg -n "Quick Start \\(optional shortcuts|Basics tutorial|Basics concept lesson|Customize your own" -S docs/LEARNING_PROFESSOR_PLAYBOOK.md docs/llm README.md` returns matches in all intended files.
+
 ## Bugs / Debugging (Optional)
 - Error:
 - Repro:
@@ -93,6 +102,7 @@
 - Why duplicate numbering (group and option both numeric) creates selection ambiguity.
 - How to design menu prompts with position mapping while keeping option numbering readable.
 - How to verify prompt consistency quickly with `rg`.
+- How quick presets can speed intake while preserving full customization through `LG-TC-DL-SM-TB`.
 
 ## Next Session Plan (Required)
-- Run one fresh-session dry run to confirm the startup prompt is clear in practice and refine wording if any friction appears.
+- Run one fresh-session dry run using both paths: pick a quick preset and then try a fully customized response.

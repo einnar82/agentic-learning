@@ -42,6 +42,10 @@ This repository defines a practical workflow to:
 2. Start a learning session:
 - Use `docs/llm/SESSION_START.md` as your startup prompt in a new AI chat.
 - Reply to intake picks using `LG-TC-DL-SM-TB` (example: `1-2-3-4-2`).
+- Optional quick presets:
+  - Basics tutorial: `2-4-1-2-1`
+  - Basics concept lesson: `1-4-1-1-1`
+  - Customize: send any valid `LG-TC-DL-SM-TB` value
 - Session intake example:
   - `2-4-2-3-1` = Build a real feature, APIs and integrations, Intermediate, Debug clinic, 25 minutes.
 

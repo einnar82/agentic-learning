@@ -36,6 +36,11 @@ At session start, ask:
 
 Reply format: `LG-TC-DL-SM-TB` (example: `1-2-3-4-2`).
 
+Quick Start (optional shortcuts; each preset already maps to all 5 groups):
+1. Basics tutorial (recommended): `2-4-1-2-1`
+2. Basics concept lesson: `1-4-1-1-1`
+3. Customize your own: send any valid `LG-TC-DL-SM-TB` value
+
 Learning Goal (Group 1, choose one):
 1. Understand a concept deeply
 2. Build a real feature

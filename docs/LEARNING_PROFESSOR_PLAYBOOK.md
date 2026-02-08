@@ -14,6 +14,11 @@ where positions map to:
 - `SM`: Session Mode
 - `TB`: Timebox
 
+Quick Start (optional shortcuts; each preset already maps to all 5 positions):
+1. Basics tutorial (recommended): `2-4-1-2-1`
+2. Basics concept lesson: `1-4-1-1-1`
+3. Customize your own: send any valid `LG-TC-DL-SM-TB` value
+
 ### Learning Goal
 1. Understand a concept deeply
 2. Build a real feature
