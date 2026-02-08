@@ -37,6 +37,26 @@ normalize_for_header_match() {
   printf '%s' "$1" | sed 's/^[[:space:]]*//; s/[[:space:]]*$//' | tr '[:upper:]' '[:lower:]'
 }
 
+header_matches() {
+  local expected="$1"
+  local actual="$2"
+  local expected_norm
+  local actual_norm
+  expected_norm="$(normalize_for_header_match "$expected")"
+  actual_norm="$(normalize_for_header_match "$actual")"
+
+  if [[ "$actual_norm" == "$expected_norm" ]]; then
+    return 0
+  fi
+
+  # Allow optional metadata in parentheses, e.g. "Learning Goal (LG / position 1)".
+  if [[ "$actual_norm" =~ ^${expected_norm}[[:space:]]+\(.*\)$ ]]; then
+    return 0
+  fi
+
+  return 1
+}
+
 skip_blank_lines() {
   while (( idx < total_lines )) && is_blank "${lines[idx]}"; do
     ((idx++))
@@ -73,7 +93,7 @@ for s in "${!section_names[@]}"; do
   if (( idx >= total_lines )); then
     error_with_context "Missing section header '$section'."
   fi
-  if [[ "$(normalize_for_header_match "${lines[idx]}")" != "$(normalize_for_header_match "$section")" ]]; then
+  if ! header_matches "$section" "${lines[idx]}"; then
     error_with_context "Expected section header '$section' at line $((idx + 1)), got '${lines[idx]}'."
   fi
   ((idx++))

@@ -15,17 +15,18 @@ where positions map to:
 - `SM`: Session Mode
 - `TB`: Timebox
 When presenting the menu, render all five groups in a fenced code block so numbering remains stable.
+Group labels are unnumbered; option numbering restarts from 1 inside each group.
 
 Canonical Intake Menu (copy verbatim when prompting the learner):
 ```text
-Learning Goal
+Learning Goal (LG / position 1)
 1. Understand a concept deeply
 2. Build a real feature
 3. Debug and fix an issue
 4. Review architecture and tradeoffs
 5. Prepare for interview or assessment
 
-Topic Category
+Topic Category (TC / position 2)
 1. Architecture and system design
 2. Scalability and performance
 3. Data modeling and storage
@@ -36,20 +37,20 @@ Topic Category
 8. AI-assisted engineering workflow
 9. Programming language fundamentals (Python/JavaScript/etc.)
 
-Depth Level
+Depth Level (DL / position 3)
 1. Beginner (definitions and intuition)
 2. Intermediate (patterns and implementation)
 3. Advanced (tradeoffs and failure modes)
 4. Expert (edge cases and design constraints)
 
-Session Mode
+Session Mode (SM / position 4)
 1. Guided lesson
 2. Build sprint
 3. Debug clinic
 4. Architecture review
 5. Teach-back challenge
 
-Timebox
+Timebox (TB / position 5)
 1. 25 minutes
 2. 50 minutes
 3. 90 minutes
