@@ -47,11 +47,11 @@ Start here for the end-to-end operating flow: `docs/WORKFLOW.md`.
 - Use `docs/llm/SESSION_START.md` as your startup prompt in a new AI chat.
 - Reply to intake picks using `LG-TC-DL-SM-TB` (example: `1-2-3-4-2`).
 - Optional quick presets:
-  - Basics tutorial: `2-4-1-2-1`
-  - Basics concept lesson: `1-4-1-1-1`
+  - Basics tutorial: `2-9-1-2-1`
+  - Basics concept lesson: `1-9-1-1-1`
   - Customize: send any valid `LG-TC-DL-SM-TB` value
 - Session intake example:
-  - `2-4-2-3-1` = Build a real feature, APIs and integrations, Intermediate, Debug clinic, 25 minutes.
+  - `2-9-2-3-1` = Build a real feature, Programming language fundamentals, Intermediate, Debug clinic, 25 minutes.
 
 3. Run the session with minimum ceremony:
 - Copy `docs/WORKING_SESSION.md` to `docs/sessions/YYYY-MM-DD.md`.

@@ -63,7 +63,7 @@ section_names=(
   "Session Mode"
   "Timebox"
 )
-section_option_counts=(5 8 4 5 3)
+section_option_counts=(5 9 4 5 3)
 
 for s in "${!section_names[@]}"; do
   section="${section_names[$s]}"

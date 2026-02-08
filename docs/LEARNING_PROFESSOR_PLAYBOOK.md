@@ -34,6 +34,7 @@ Topic Category
 6. Testing and quality engineering
 7. Deployment and operations
 8. AI-assisted engineering workflow
+9. Programming language fundamentals (Python/JavaScript/etc.)
 
 Depth Level
 1. Beginner (definitions and intuition)
@@ -57,8 +58,8 @@ Reply format: LG-TC-DL-SM-TB
 ```
 
 Quick Start (optional shortcuts; each preset already maps to all 5 positions):
-1. Basics tutorial (recommended): `2-4-1-2-1`
-2. Basics concept lesson: `1-4-1-1-1`
+1. Basics tutorial (recommended): `2-9-1-2-1`
+2. Basics concept lesson: `1-9-1-1-1`
 3. Customize your own: send any valid `LG-TC-DL-SM-TB` value
 
 ## 2) Teaching Contract
@@ -152,6 +153,12 @@ The learner must:
 - assumption disclosure and challenge
 - minimal patch requests
 - evidence-first validation
+
+### Programming Language Fundamentals
+- syntax and control flow basics
+- functions, modules, and reuse patterns
+- data structures and idiomatic usage
+- debugging habits and common runtime errors
 
 ## 5) Output Requirements
 
