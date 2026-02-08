@@ -31,8 +31,8 @@ This repository defines a practical workflow to:
 - `docs/adr/`: ADR templates, accepted decisions, and index
 - `docs/llm/`: model-specific entrypoint instructions and startup prompt
 - `AGENTS.md`: root entrypoint for Codex compatibility
-- `CLAUDE.md`: root entrypoint for Claude compatibility
-- `.cursorrules`: root rules for Cursor compatibility
+- `docs/llm/SESSION_START.md`: copy-paste startup prompt for any model
+- `docs/llm/CODEX.md`, `docs/llm/CLAUDE.md`, `docs/llm/CURSOR.md`, `docs/llm/GEMINI.md`: model-specific startup guides
 
 ## Quick Start
 
@@ -41,6 +41,9 @@ This repository defines a practical workflow to:
 
 2. Start a learning session:
 - Use `docs/llm/SESSION_START.md` as your startup prompt in a new AI chat.
+- Reply to intake picks using `LG-TC-DL-SM-TB` (example: `1-2-3-4-2`).
+- Session intake example:
+  - `2-4-2-3-1` = Build a real feature, APIs and integrations, Intermediate, Debug clinic, 25 minutes.
 
 3. Run the session with minimum ceremony:
 - Update required fields in `docs/WORKING_SESSION.md`.
@@ -53,8 +56,8 @@ This repository defines a practical workflow to:
 ## Tool-Specific Usage
 
 - Codex: uses root `AGENTS.md` automatically; optional guide in `docs/llm/CODEX.md`
-- Claude: use root `CLAUDE.md`
-- Cursor: uses root `.cursorrules` automatically; optional guide in `docs/llm/CURSOR.md`
+- Claude: use `docs/llm/CLAUDE.md` as the startup instruction source
+- Cursor: use `docs/llm/CURSOR.md` as the startup instruction source
 - Gemini: use `docs/llm/GEMINI.md`
 
 ## Minimum Viable Ceremony (Default)

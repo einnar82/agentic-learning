@@ -72,6 +72,16 @@
 - Change: Added the same `LG-TC-DL-SM-TB` reply format and position mapping to `docs/LEARNING_PROFESSOR_PLAYBOOK.md`.
 - Prove: `rg -n "Reply format: `LG-TC-DL-SM-TB`|where positions map to:" -S docs/LEARNING_PROFESSOR_PLAYBOOK.md` returns matching lines.
 
+### Change 4
+- Explain: The top-level README needed to reflect current files and the new intake response format.
+- Change: Updated `README.md` repository structure and tool usage entries, and added `LG-TC-DL-SM-TB` quick-start guidance.
+- Prove: `rg -n "SESSION_START\\.md|LG-TC-DL-SM-TB|CLAUDE\\.md: root|\\.cursorrules" -S README.md` shows the new guidance and no outdated root-reference lines.
+
+### Change 5
+- Explain: A concrete example improves quick-start usability and reduces mistakes when replying with compact intake codes.
+- Change: Added a short `Session intake example` line in `README.md` (`2-4-2-3-1`) with decoded meanings.
+- Prove: `rg -n "Session intake example|2-4-2-3-1" -S README.md` returns both new lines.
+
 ## Bugs / Debugging (Optional)
 - Error:
 - Repro:
