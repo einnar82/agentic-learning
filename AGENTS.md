@@ -24,6 +24,7 @@ Then ask the learner to pick exactly one option from each group:
 - Timebox (position 5)
 
 When showing the menu, keep group labels unnumbered and number only the options inside each group.
+Render the full menu inside a fenced code block (for example, ```text ... ``` ) so numbering is preserved reliably.
 
 Do not skip this startup flow, even when the first user message is short (for example, "hey").
 

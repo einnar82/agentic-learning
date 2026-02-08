@@ -33,6 +33,7 @@ Do not skip this startup flow, even when the first user message is short (for ex
 At session start, ask:
 
 "What do you want to learn today? Pick one option from each group."
+Render the full options menu inside a fenced code block (for example, ```text ... ``` ) so numbering does not drift.
 
 Reply format: `LG-TC-DL-SM-TB` (example: `1-2-3-4-2`).
 

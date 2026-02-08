@@ -91,6 +91,11 @@
 - Change: Added `Quick Start` presets (`2-4-1-2-1`, `1-4-1-1-1`) and `Customize your own` to `docs/LEARNING_PROFESSOR_PLAYBOOK.md`, `docs/llm/SESSION_START.md`, `docs/llm/CODEX.md`, `docs/llm/CLAUDE.md`, `docs/llm/CURSOR.md`, and documented the shortcuts in `README.md`.
 - Prove: `rg -n "Quick Start \\(optional shortcuts|Basics tutorial|Basics concept lesson|Customize your own" -S docs/LEARNING_PROFESSOR_PLAYBOOK.md docs/llm README.md` returns matches in all intended files.
 
+### Change 7
+- Explain: A rendered startup reply dropped numbered options, so the intake prompt needs a presentation guard to prevent markdown list drift.
+- Change: Added an explicit instruction to render the full startup options menu in a fenced code block in `AGENTS.md`, `docs/LEARNING_PROFESSOR_PLAYBOOK.md`, `docs/llm/SESSION_START.md`, `docs/llm/CODEX.md`, `docs/llm/CLAUDE.md`, and `docs/llm/CURSOR.md`.
+- Prove: `rg -n "fenced code block|numbering does not drift|numbering remains stable|numbering is preserved reliably" -S AGENTS.md docs/LEARNING_PROFESSOR_PLAYBOOK.md docs/llm` returns matches in all updated files.
+
 ## Bugs / Debugging (Optional)
 - Error:
 - Repro:
@@ -103,6 +108,8 @@
 - How to design menu prompts with position mapping while keeping option numbering readable.
 - How to verify prompt consistency quickly with `rg`.
 - How quick presets can speed intake while preserving full customization through `LG-TC-DL-SM-TB`.
+- How rendering instructions (code block vs markdown list) affect option integrity in startup menus.
 
 ## Next Session Plan (Required)
 - Run one fresh-session dry run using both paths: pick a quick preset and then try a fully customized response.
+- Confirm the menu always displays all options when rendered as a fenced block.

@@ -13,6 +13,7 @@ where positions map to:
 - `DL`: Depth Level
 - `SM`: Session Mode
 - `TB`: Timebox
+When presenting the menu, render all five groups in a fenced code block so numbering remains stable.
 
 Quick Start (optional shortcuts; each preset already maps to all 5 positions):
 1. Basics tutorial (recommended): `2-4-1-2-1`
