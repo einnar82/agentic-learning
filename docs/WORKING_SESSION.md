@@ -3,7 +3,7 @@
 > Purpose: a living log for day-to-day learning, experiments, and evolving decisions.
 > This file changes often. The guardrails and ADRs change less often.
 > Minimum Viable Ceremony default: complete only sections marked "Required".
-> Last update (2026-02-08): added quick-start presets (including Basics) with an explicit Customize path.
+> Last update (2026-02-08): added quick-start presets (including Basics), an explicit Customize path, and a root `apps/` project-placement guardrail.
 
 ## Session Mode
 - Default: Minimum Viable Ceremony (MVC)
@@ -22,9 +22,10 @@
 
 ## Session Goal (Required)
 - Make startup selection fast for beginner tutorials with quick presets and a clear Customize path.
+- Add an explicit guardrail that requires the runnable project to live under the root `apps/` directory.
 
 ## Plan (Plan-First, Required)
-- Vertical slice for today: make prompt menus consistent and easy to answer in one pass.
+- Vertical slice for today: make prompt menus consistent and easy to answer in one pass, then enforce repository layout consistency.
 - Tasks (small, reversible steps):
   - [x] Replace numbered group headers with named group labels + positions.
   - [x] Keep numbering only for options inside each group and add reply mapping format.
@@ -33,6 +34,8 @@
   - [x] Add quick-start preset options for beginner use cases.
   - [x] Include an explicit Customize option that keeps full `LG-TC-DL-SM-TB` flexibility.
   - [x] Verify quick-start wording is consistent across playbook and model startup files.
+  - [x] Add a guardrail in `docs/GUARDRAILS.md` that requires runnable project code under root `apps/`.
+  - [x] Keep the new layout rule concrete with an `apps/my-project` example.
 
 ## Context Pack (Optional, Tier 1/2 Recommended)
 - Official docs/specs:
@@ -96,6 +99,11 @@
 - Change: Added an explicit instruction to render the full startup options menu in a fenced code block in `AGENTS.md`, `docs/LEARNING_PROFESSOR_PLAYBOOK.md`, `docs/llm/SESSION_START.md`, `docs/llm/CODEX.md`, `docs/llm/CLAUDE.md`, and `docs/llm/CURSOR.md`.
 - Prove: `rg -n "fenced code block|numbering does not drift|numbering remains stable|numbering is preserved reliably" -S AGENTS.md docs/LEARNING_PROFESSOR_PLAYBOOK.md docs/llm` returns matches in all updated files.
 
+### Change 8
+- Explain: Project files can scatter across the repository unless layout expectations are explicit.
+- Change: Added `0.6 Repository Layout Guard` in `docs/GUARDRAILS.md` requiring the runnable project to be created under root `apps/` and not at repository root.
+- Prove: `rg -n -F "0.6 Repository Layout Guard" docs/GUARDRAILS.md && rg -n -F "apps/my-project" docs/GUARDRAILS.md && rg -n -F "Do not place primary app code at the repository root." docs/GUARDRAILS.md` returns all new guardrail lines.
+
 ## Bugs / Debugging (Optional)
 - Error:
 - Repro:
@@ -109,7 +117,11 @@
 - How to verify prompt consistency quickly with `rg`.
 - How quick presets can speed intake while preserving full customization through `LG-TC-DL-SM-TB`.
 - How rendering instructions (code block vs markdown list) affect option integrity in startup menus.
+- How explicit repository layout guardrails prevent project sprawl and reduce ambiguity.
+- How to enforce a simple placement contract (`apps/<project-name>`) with minimal process overhead.
 
 ## Next Session Plan (Required)
 - Run one fresh-session dry run using both paths: pick a quick preset and then try a fully customized response.
 - Confirm the menu always displays all options when rendered as a fenced block.
+- Add a short scaffold note in startup docs that points to `apps/<project-name>` when creating a new project.
+- Validate the same path convention appears in README onboarding text.

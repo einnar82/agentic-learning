@@ -57,6 +57,11 @@ ADR is required for decisions involving:
 - If ceremony feels heavy for two sessions in a row, remove one required field from your session checklist and reassess after one week.
 - Default to Tier 1 unless a change is clearly Tier 0 or Tier 2.
 
+### 0.6 Repository Layout Guard
+
+- The runnable project in this repository must be created under the root `apps/` directory (for example, `apps/my-project`).
+- Do not place primary app code at the repository root.
+
 ---
 
 ## A. Prime Directives (Non‑negotiables)
