@@ -2,6 +2,8 @@
 
 A lightweight, reusable documentation system for learning by building with AI assistants.
 
+![Screenshot](./images/screenshot.png)
+
 This repository defines a practical workflow to:
 - learn technical topics while shipping real work
 - keep decisions explicit with ADRs
