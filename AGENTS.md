@@ -27,6 +27,7 @@ Then ask the learner to pick exactly one option from each group:
 Use the exact option set in `docs/LEARNING_PROFESSOR_PLAYBOOK.md` (Section 1, Session Intake, Canonical Intake Menu) and do not omit any options.
 When showing the menu, keep group labels unnumbered and number only the options inside each group.
 Render the full menu inside a fenced code block (for example, ```text ... ``` ) so numbering is preserved reliably.
+Keep exactly one blank line between each group block in the menu.
 Reply format must be `LG-TC-DL-SM-TB`.
 After intake selection, follow `docs/WORKFLOW.md` for end-to-end execution.
 

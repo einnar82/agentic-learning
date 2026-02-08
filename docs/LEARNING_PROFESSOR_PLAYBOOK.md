@@ -16,6 +16,7 @@ where positions map to:
 - `TB`: Timebox
 When presenting the menu, render all five groups in a fenced code block so numbering remains stable.
 Group labels are unnumbered; option numbering restarts from 1 inside each group.
+Keep exactly one blank line between each intake group block.
 
 Canonical Intake Menu (copy verbatim when prompting the learner):
 ```text

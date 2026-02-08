@@ -1,8 +1,8 @@
 #!/usr/bin/env bash
 set -euo pipefail
 
-PLAYBOOK_FILE="docs/LEARNING_PROFESSOR_PLAYBOOK.md"
-CANONICAL_HEADER="Canonical Intake Menu (copy verbatim when prompting the learner):"
+PLAYBOOK_FILE="${PLAYBOOK_FILE:-docs/LEARNING_PROFESSOR_PLAYBOOK.md}"
+CANONICAL_HEADER="${CANONICAL_HEADER:-Canonical Intake Menu (copy verbatim when prompting the learner):}"
 
 if [[ ! -f "$PLAYBOOK_FILE" ]]; then
   echo "ERROR: Missing file: $PLAYBOOK_FILE"
@@ -88,6 +88,7 @@ section_option_counts=(5 9 4 5 3)
 for s in "${!section_names[@]}"; do
   section="${section_names[$s]}"
   expected_count="${section_option_counts[$s]}"
+  last_section_idx=$(( ${#section_names[@]} - 1 ))
 
   skip_blank_lines
   if (( idx >= total_lines )); then
@@ -123,9 +124,28 @@ for s in "${!section_names[@]}"; do
   if (( idx < total_lines )) && [[ "${lines[idx]}" =~ ^[0-9]+\.\  ]]; then
     error_with_context "Section '$section' has extra options starting at line $((idx + 1))."
   fi
+
+  if (( s < last_section_idx )); then
+    blank_count=0
+    while (( idx < total_lines )) && is_blank "${lines[idx]}"; do
+      ((idx++))
+      ((blank_count++))
+    done
+    if (( blank_count != 1 )); then
+      error_with_context "Section '$section' must be followed by exactly one blank line before the next section (found $blank_count)."
+    fi
+  fi
 done
 
-skip_blank_lines
+blank_count_before_reply=0
+while (( idx < total_lines )) && is_blank "${lines[idx]}"; do
+  ((idx++))
+  ((blank_count_before_reply++))
+done
+if (( blank_count_before_reply != 1 )); then
+  error_with_context "Expected exactly one blank line before the reply format line (found $blank_count_before_reply)."
+fi
+
 if (( idx >= total_lines )); then
   error_with_context "Missing 'Reply format: LG-TC-DL-SM-TB' line."
 fi
@@ -138,7 +158,6 @@ if [[ "$normalized_reply" != "Replyformat:LG-TC-DL-SM-TB" ]]; then
 fi
 ((idx++))
 
-skip_blank_lines
 if (( idx < total_lines )); then
   error_with_context "Unexpected trailing content in canonical block at line $((idx + 1)): '${lines[idx]}'."
 fi

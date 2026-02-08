@@ -295,6 +295,9 @@ ADR is required for decisions involving:
 49) **Postmortem Lite**
    What worked, what didn’t, next improvements.
 
+50) **Canonical Intake Formatting Lock**
+   In startup prompts, render the full intake menu in one fenced code block, keep all canonical options, and use exactly one blank line between group blocks.
+
 ---
 
 ## Appendix: PR Template (Default Sections)

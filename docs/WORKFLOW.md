@@ -13,6 +13,7 @@ Use this as the end-to-end operating guide for the repository.
    - Depth Level
    - Session Mode
    - Timebox
+   - When rendering the menu, keep exactly one blank line between group blocks.
 3. Reply in format `LG-TC-DL-SM-TB`.
 
 ## 2) Scope The Session

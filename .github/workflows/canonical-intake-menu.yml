@@ -15,3 +15,6 @@ jobs:
 
       - name: Validate canonical intake menu
         run: ./scripts/check_canonical_intake_menu.sh
+
+      - name: Validate checker negative fixture
+        run: ./scripts/test_check_canonical_intake_menu.sh

@@ -76,11 +76,12 @@ For the full lifecycle (start -> execute -> close), use `docs/WORKFLOW.md`.
 ## Canonical Intake Guard
 
 - CI guard: `.github/workflows/canonical-intake-menu.yml` runs `scripts/check_canonical_intake_menu.sh` on pull requests and pushes to `main`.
-- Validation mode: structural (required section headers in order, case-insensitive header matching, option counts, and numbering sequence). Option wording can be edited as long as structure stays valid.
+- Validation mode: structural (required section headers in order, case-insensitive header matching, option counts, numbering sequence, and one-blank-line section separators). Option wording can be edited as long as structure stays valid.
 - Local guard (pre-commit): enable repository hooks once with:
   - `git config core.hooksPath .githooks`
 - Manual run:
   - `./scripts/check_canonical_intake_menu.sh`
+  - `./scripts/test_check_canonical_intake_menu.sh` (includes negative fixture: missing section separator)
 
 ## Minimum Viable Ceremony (Default)
 

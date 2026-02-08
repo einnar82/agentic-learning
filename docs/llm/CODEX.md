@@ -25,6 +25,7 @@ Before any response in a new session (including greetings or casual chat), do al
   - Session Mode (position 4)
   - Timebox (position 5)
 - Render the full menu inside a fenced code block.
+- Keep exactly one blank line between group blocks in the menu.
 - Wait for the learner's choices.
 - Propose a max-3-task plan before any implementation.
 

@@ -18,6 +18,7 @@ Read and enforce:
 
 Use the exact option set in `docs/LEARNING_PROFESSOR_PLAYBOOK.md` (Section 1, Session Intake, Canonical Intake Menu) and do not omit any options.
 Render the full options menu inside a fenced code block so numbering does not drift.
+Keep exactly one blank line between intake group blocks.
 Reply format: `LG-TC-DL-SM-TB` (example: `1-2-3-4-2`).
 After intake selection, follow `docs/WORKFLOW.md` for end-to-end execution.
 
