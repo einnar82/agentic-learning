@@ -59,7 +59,7 @@ header_matches() {
 
 skip_blank_lines() {
   while (( idx < total_lines )) && is_blank "${lines[idx]}"; do
-    ((idx++))
+    (( idx += 1 ))
   done
 }
 
@@ -97,7 +97,7 @@ for s in "${!section_names[@]}"; do
   if ! header_matches "$section" "${lines[idx]}"; then
     error_with_context "Expected section header '$section' at line $((idx + 1)), got '${lines[idx]}'."
   fi
-  ((idx++))
+  (( idx += 1 ))
 
   for ((expected_num=1; expected_num<=expected_count; expected_num++)); do
     if (( idx >= total_lines )); then
@@ -118,7 +118,7 @@ for s in "${!section_names[@]}"; do
       error_with_context "Section '$section' has empty option text at line $((idx + 1))."
     fi
 
-    ((idx++))
+    (( idx += 1 ))
   done
 
   if (( idx < total_lines )) && [[ "${lines[idx]}" =~ ^[0-9]+\.\  ]]; then
@@ -128,8 +128,8 @@ for s in "${!section_names[@]}"; do
   if (( s < last_section_idx )); then
     blank_count=0
     while (( idx < total_lines )) && is_blank "${lines[idx]}"; do
-      ((idx++))
-      ((blank_count++))
+      (( idx += 1 ))
+      (( blank_count += 1 ))
     done
     if (( blank_count != 1 )); then
       error_with_context "Section '$section' must be followed by exactly one blank line before the next section (found $blank_count)."
@@ -139,8 +139,8 @@ done
 
 blank_count_before_reply=0
 while (( idx < total_lines )) && is_blank "${lines[idx]}"; do
-  ((idx++))
-  ((blank_count_before_reply++))
+  (( idx += 1 ))
+  (( blank_count_before_reply += 1 ))
 done
 if (( blank_count_before_reply != 1 )); then
   error_with_context "Expected exactly one blank line before the reply format line (found $blank_count_before_reply)."
@@ -156,7 +156,7 @@ normalized_reply="${normalized_reply//[[:space:]]/}"
 if [[ "$normalized_reply" != "Replyformat:LG-TC-DL-SM-TB" ]]; then
   error_with_context "Invalid reply format line at line $((idx + 1)): '$reply_line'."
 fi
-((idx++))
+(( idx += 1 ))
 
 if (( idx < total_lines )); then
   error_with_context "Unexpected trailing content in canonical block at line $((idx + 1)): '${lines[idx]}'."
